@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   Stack,
@@ -8,15 +8,15 @@ import {
   Tag,
   Image,
   useColorMode,
-  Avatar
-} from '@chakra-ui/react';
-import { FaGraduationCap } from 'react-icons/fa';
-import { BsFillBriefcaseFill } from 'react-icons/bs';
-import PhaedraLogo from '../assets/images/phaedra.jpeg';
-import BrainxLogo from '../assets/images/brainxtech.png';
-import CodenyaLogo from '../assets/images/codenya.png';
-import BrainplowLogo from '../assets/images/brainplow.jpg';
-import UniLogo from '../assets/images/fast.png';
+  Avatar,
+} from "@chakra-ui/react";
+import { FaGraduationCap } from "react-icons/fa";
+import { BsFillBriefcaseFill } from "react-icons/bs";
+import PhaedraLogo from "../assets/images/phaedra.jpeg";
+import BrainxLogo from "../assets/images/brainxtech.png";
+import CodenyaLogo from "../assets/images/codenya.png";
+import BrainplowLogo from "../assets/images/brainplow.jpg";
+import UniLogo from "../assets/images/fast.png";
 
 function Company({
   title,
@@ -26,13 +26,13 @@ function Company({
   logo,
   colorMode,
   alt,
-  isEducation = false
+  isEducation = false,
 }) {
   return (
     <Box
       paddingX={4}
       paddingY={5}
-      _hover={{ shadow: 'md' }}
+      _hover={{ shadow: "md" }}
       borderColor={`mode.${colorMode}.border`}
       backgroundColor={`mode.${colorMode}.cardBG`}
       position="relative"
@@ -43,12 +43,12 @@ function Company({
           <Image
             rounded="full"
             width={{
-              sm: '4rem',
-              md: '14'
+              sm: "4rem",
+              md: "14",
             }}
             height={{
-              sm: isEducation ? '4rem' : 'auto',
-              md: 'auto'
+              sm: isEducation ? "4rem" : "auto",
+              md: "auto",
             }}
             objectFit="cover"
             src={logo}
@@ -61,7 +61,7 @@ function Company({
             <Heading fontSize="sm" color={`mode.${colorMode}.career.subtext`}>
               {role}
               <Text
-                display={['block', 'none', 'none', 'none']}
+                display={["block", "none", "none", "none"]}
                 fontSize={14}
                 color={`mode.${colorMode}.career.subtext`}
               >
@@ -70,14 +70,14 @@ function Company({
             </Heading>
           </Stack>
         </Flex>
-        <Stack display={['none', 'flex', 'flex', 'flex']}>
+        <Stack display={["none", "flex", "flex", "flex"]}>
           <Text fontSize={14} color={`mode.${colorMode}.career.subtext`}>
             {period}
           </Text>
         </Stack>
       </Flex>
       <Stack spacing={2} mt={3} isInline alignItems="center">
-        {skills.split(',').map(skill => (
+        {skills.split(",").map((skill) => (
           <Tag
             size="sm"
             padding="0 3px"
@@ -99,37 +99,37 @@ const About = () => {
   const { colorMode } = useColorMode();
   const companies = [
     {
-      title: 'Phaedra Solutions',
-      alt: 'PS image',
-      role: 'Senior Software Engineer',
-      skills: 'Ruby, ROR, Typescript, Javascript, React, AWS',
-      period: '2019 - Present',
-      logo: PhaedraLogo
+      title: "Phaedra Solutions",
+      alt: "PS image",
+      role: "Senior Software Engineer",
+      skills: "Ruby, ROR, Typescript, Javascript, React, AWS",
+      period: "2019 - Present",
+      logo: PhaedraLogo,
     },
     {
-      title: 'Brainx Technologies',
-      alt: 'BT image',
-      role: 'Software Engineer',
-      skills: 'Ruby, ROR, Javascript, Python',
-      period: '2018 - 2019',
-      logo: BrainxLogo
+      title: "Brainx Technologies",
+      alt: "BT image",
+      role: "Software Engineer",
+      skills: "Ruby, ROR, Javascript, Python",
+      period: "2018 - 2019",
+      logo: BrainxLogo,
     },
     {
-      title: 'Codenya Studio',
-      alt: 'CS image',
-      role: 'Co-founder, CTO',
-      skills: 'Project Management, Web Development, Devops',
-      period: '2018 - Present',
-      logo: CodenyaLogo
+      title: "Codenya Studio",
+      alt: "CS image",
+      role: "Co-founder, CTO",
+      skills: "Project Management, Web Development, Devops",
+      period: "2018 - Present",
+      logo: CodenyaLogo,
     },
     {
-      title: 'Brainplow',
-      alt: 'Brainplow image',
-      role: 'Software Engineer',
-      skills: 'Javascript, python, Angular',
-      period: '2017 - 2018',
-      logo: BrainplowLogo
-    }
+      title: "Brainplow",
+      alt: "Brainplow image",
+      role: "Software Engineer",
+      skills: "Javascript, python, Angular",
+      period: "2017 - 2018",
+      logo: BrainplowLogo,
+    },
   ];
   return (
     <Stack
@@ -144,7 +144,7 @@ const About = () => {
     >
       <Stack spacing={2} marginBottom={8}>
         <Heading color={`mode.${colorMode}.text`} display="flex">
-          Hi, I'm Ahmad{' '}
+          Hi, I'm Ahmad{" "}
         </Heading>
         <Stack as="flex" flexDirection="row" alignItems="center">
           <Box>
@@ -176,7 +176,7 @@ const About = () => {
           borderLeft="4px solid"
           borderColor={`mode.${colorMode}.skills.border`}
           color={`mode.${colorMode}.career.subtext`}
-          _hover={{ shadow: 'md' }}
+          _hover={{ shadow: "md" }}
           backgroundColor={`mode.${colorMode}.cardBG`}
           rounded="md"
           fontWeight="bold"
